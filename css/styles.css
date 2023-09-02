@@ -870,3 +870,129 @@ h1 {
   position: absolute;
   margin: 8px 16px;
 }
+
+/* menu mobile */
+
+.menu-toggle {
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 40px;
+  background-color: var(--white);
+  z-index: 999;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform 250ms var(--standard-animation);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #fff;
+  background-color: var(--cornflower);
+
+  fill: var(--dark);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin-top: 80px;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.111;
+  letter-spacing: 0.72px;
+  color: var(--dark);
+  margin-bottom: 40px;
+}
+
+.mobile-menu .mobile-active {
+  color: var(--link-active);
+}
+
+.mobile-tel {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.111;
+  letter-spacing: 0.72px;
+  color: var(--primary-brand);
+  margin-bottom: 40px;
+}
+
+.mobile-mail {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  color: var(--text);
+}
+
+.mobile-social-icons {
+  display: flex;
+  max-width: 328px;
+  margin-top: 48px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.social-icon-mobile {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-brand);
+  transition: background-color var(--standard-animation);
+}
+
+/* menu mobilne end */
